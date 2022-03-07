@@ -1,0 +1,46 @@
+{
+	"name": "SourceDataset_11c",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobCopy",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "1000_Companies.csv",
+				"container": "sourceblob"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "R&D Spend",
+				"type": "String"
+			},
+			{
+				"name": "Administration",
+				"type": "String"
+			},
+			{
+				"name": "Marketing Spend",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "Profit",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
